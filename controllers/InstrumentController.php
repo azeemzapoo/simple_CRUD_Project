@@ -19,4 +19,12 @@ class InstrumentController {
     public function deleteInactive() {
         response_json(200, $this->service->deleteInactiveInstruments());
     }
+
+    public function listByFamily() {
+        response_json(200, $this->service->listInstrumentsByFamily());
+    }
+
+    public function familyStats() {
+        response_json(200, $this->service->familyStats());
+    }
 }

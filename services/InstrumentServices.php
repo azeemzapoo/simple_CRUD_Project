@@ -23,4 +23,12 @@ class InstrumentService {
         $deleted = $this->model->deleteInactive();
         return ['deleted' => $deleted];
     }
+
+    public function listInstrumentsByFamily(): array {
+        return $this->model->instrumentsByFamily();
+    }
+
+    public function familyStats(): array {
+        return $this->model->familyStats();
+    }
 }
